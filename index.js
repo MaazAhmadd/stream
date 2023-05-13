@@ -3,7 +3,7 @@ const fs = require("fs");
 const RangeParser = require("range-parser");
 const express = require("express");
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 const path = require("path");
 // This function reads the video file from disk and returns a streamable response
 function streamVideo(req, res, videoPath) {
